@@ -1,28 +1,48 @@
 /*MÓVIL (DEFAULT)*/
+body{
+    background: rgb(245,173,230);
+    background: linear-gradient(0deg, rgba(245,173,230,1) 2%, rgb(241, 109, 142) 100%);
+    background-attachment: fixed;
+}
+
 section{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+p{
+    text-align: justify;
+}
+
 article{
-    background-color: rgb(243, 127, 127);
-    border: 2px solid darkblue;
-    padding: 1vw;
+    border: 2px dotted rgb(139, 0, 58);
+    border-radius: 10px;
+    padding: 2vw;
     margin: 5px;
     width: 80vw;
-    height: 10vh;
+}
+
+#uno, #tres, #cinco{
+    background-color: rgb(243, 127, 127);
+}
+
+#dos, #cuatro, #seis{
+    background-color: rgb(255, 188, 188);
 }
 
 /*PC VERTICAL Y TABLET HORIZONTAL*/
-@media screen and (min-width:760px) and (max-width: 1200px){
-    section{
-        
+@media screen and (min-width:760px) and (max-width: 1200px) and (orientation:landscape){
+    article{
+        width: 40vw;
     }
 
-    article{
-        background-color: rgb(190, 181, 53);
-        width: 40vw;
+    #uno, #cuatro, #cinco{
+        background-color: rgb(243, 127, 127);
+    }
+    
+    #dos, #tres, #seis{
+        background-color: rgb(255, 188, 188);
     }
 
 }
@@ -35,10 +55,8 @@ article{
     }
 
     article{
-        background-color: rgb(107, 189, 125);
         width: auto;
     }
 
-    
 }
 

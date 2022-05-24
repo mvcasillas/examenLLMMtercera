@@ -1,0 +1,44 @@
+/*MÓVIL (DEFAULT)*/
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article{
+    background-color: rgb(243, 127, 127);
+    border: 2px solid darkblue;
+    padding: 1vw;
+    margin: 5px;
+    width: 80vw;
+    height: 10vh;
+}
+
+/*PC VERTICAL Y TABLET HORIZONTAL*/
+@media screen and (min-width:760px) and (max-width: 1200px){
+    section{
+        
+    }
+
+    article{
+        background-color: rgb(190, 181, 53);
+        width: 40vw;
+    }
+
+}
+
+/*PC HORIZONTAL PANTALLA ESCRITORIO*/
+@media screen and (min-width:1201px){
+    section{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    article{
+        background-color: rgb(107, 189, 125);
+        width: auto;
+    }
+
+    
+}
+

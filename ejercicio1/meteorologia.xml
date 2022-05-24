@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE meteorologia>
+
+<meteorologia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="meteoSchema.xsd">
+    <comunidadAutonoma>
+        <nombre>Comunidad de Madrid</nombre>
+        <provincia>
+            <nombre>Madrid</nombre>
+            <poblacion>
+                <prediccion>
+
+                </prediccion>
+            </poblacion>
+        </provincia>
+    </comunidadAutonoma>
+
+
+</meteorologia>

@@ -1,18 +1,25 @@
-/*MÓVIL (DEFAULT)*/
+/*MÓVIL (DEFAULT)----------------------------------*/
 body{
     background: rgb(245,173,230);
     background: linear-gradient(0deg, rgba(245,173,230,1) 2%, rgb(241, 109, 142) 100%);
     background-attachment: fixed;
 }
 
+p{
+    text-align: justify;
+}
+
+img#cupcake{
+    width: 20%;
+}
+
+/*En esta versión le doy un display flex que continúa para la siguiente,
+    la propiedad wrap para que se coloquen y los anchos adecuados
+    además de justify content*/
 section{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-p{
-    text-align: justify;
 }
 
 article{
@@ -21,6 +28,9 @@ article{
     padding: 2vw;
     margin: 5px;
     width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #uno, #tres, #cinco{
@@ -31,8 +41,21 @@ article{
     background-color: rgb(255, 188, 188);
 }
 
-/*PC VERTICAL Y TABLET HORIZONTAL*/
-@media screen and (min-width:760px) and (max-width: 1200px) and (orientation:landscape){
+#sectionheader{
+    width: 90vw;
+    text-align: center;
+}
+
+/*Cambio el texto del header del section acorde al dispositivo*/
+#sectionheader::after{
+    content:"móvil";
+}
+
+/*-------------------------------------------------------------
+PC VERTICAL Y TABLET HORIZONTAL------------------------------------*/
+@media screen and (min-width:760px) and (max-width: 1250px), screen and (min-width:700px) and (max-width: 1250px) and (orientation:landscape){
+    /*Para esta versión ajusto el ancho de los article
+        y el orden de los colorinchis para que se alternen*/
     article{
         width: 40vw;
     }
@@ -45,18 +68,38 @@ article{
         background-color: rgb(255, 188, 188);
     }
 
-}
-
-/*PC HORIZONTAL PANTALLA ESCRITORIO*/
-@media screen and (min-width:1201px){
-    section{
-        display:grid;
-        grid-template-columns: repeat(3, 1fr);
+    /*Cambio el texto del header del section acorde al dispositivo*/
+    #sectionheader::after{
+        content:"PC vertical y tablet horizontal";
     }
 
+}
+
+/*--------------------------------------------------------------------
+PC HORIZONTAL PANTALLA ESCRITORIO-------------------------------------*/
+@media screen and (min-width:1251px){
+    /*Para esta versión hago un grid de 3 columnas de ancho adaptable
+        y el orden de los colorinchis para que se alternen es el mismo que el default*/
+
+    section{
+        display:grid;
+        grid-template-columns: 30vw 30vw 30vw;
+    }
+
+    /*auto para que se ajuste al ancho de la grid (sobreescribiendo el ancho que le di por defecto)*/
     article{
         width: auto;
     }
 
+    /*Cambio el texto del header del section acorde al dispositivo*/
+    #sectionheader::after{
+        content:"PC horizontal";
+    }
+
+    /*Indico que el header ocupa las 3 columnas de la primera fila*/
+    #sectionheader{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
 }
 

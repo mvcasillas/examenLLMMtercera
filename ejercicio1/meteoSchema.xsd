@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+<!-- árbol de temperatura con límites superior e inferior
+     tipo común a tmax y tmin -->
 <xs:simpleType name="temperatura">
     <xs:restriction base="xs:integer">
         <xs:minExclusive value="-100"/>
@@ -8,7 +10,11 @@
     </xs:restriction>
 </xs:simpleType>
 
-
+<!-- árbol de predicción con limitaciones de ocurrencias
+     los casos con minOccurs=1 hacen que sean obligatorios (mínimo 1)
+     y sólo puedan ponerse 1 vez al no tener maxOccurs (el mín es 1 y el máx también)
+    
+     aviso es opcional así que min 0 máximo 10-->
 <xs:complexType name="prediccion">
     <xs:sequence>
         <xs:element name="fecha" minOccurs="1">
@@ -37,13 +43,16 @@
     </xs:sequence>
 </xs:complexType>
 
-
+<!-- árbol del simpletype nombre común a CAM, provincia y población
+     con validación de patrón-->
 <xs:simpleType name="nombre">
     <xs:restriction base="xs:string">
         <xs:pattern value="[A-Z][a-z]+(\s[A-Za-z]+)*"/>
     </xs:restriction>
 </xs:simpleType>
 
+<!-- árbol de población para no alargar más el árbol general
+     restricción de mínimo 1 predicción, sin límite superior-->
 <xs:complexType name="poblacion">
     <xs:sequence>
         <xs:element name="nombre" type="nombre" minOccurs="1"/>
@@ -51,6 +60,8 @@
     </xs:sequence>
 </xs:complexType>
 
+<!-- árbol de estructura general con restricciones de número de ocurrencias para cada campo 
+     los nombres tienen mínimo 1 occur (son obligatorios) y sin maxOccur = máximo 1 occur-->
 <xs:element name="meteorologia">
     <xs:complexType>
         <xs:sequence>

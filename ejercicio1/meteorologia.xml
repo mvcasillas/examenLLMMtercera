@@ -2,18 +2,93 @@
 <!DOCTYPE meteorologia>
 
 <meteorologia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:noNamespaceSchemaLocation="meteoSchema.xsd">
+    xsi:noNamespaceSchemaLocation="meteoSchema.xsd">
+
     <comunidadAutonoma>
         <nombre>Comunidad de Madrid</nombre>
         <provincia>
             <nombre>Madrid</nombre>
             <poblacion>
+                <nombre>Ciudad Lineal</nombre>
                 <prediccion>
+                    <fecha>10-02-2000</fecha>
+                    <temperaturaMax>20</temperaturaMax>
+                    <temperaturaMin>-10</temperaturaMin>
+                    <probLluvia>55%</probLluvia>
+                    <aviso>viento</aviso>
+                    <aviso>nieve</aviso>
+                </prediccion>
 
+                <prediccion>
+                    <fecha>11-02-2000</fecha>
+                    <temperaturaMax>15</temperaturaMax>
+                    <temperaturaMin>4</temperaturaMin>
+                    <probLluvia>25%</probLluvia>
+                </prediccion>
+            </poblacion>
+            <poblacion>
+                <nombre>Alcobendas</nombre>
+                <prediccion>
+                    <fecha>11-02-2000</fecha>
+                    <temperaturaMax>15</temperaturaMax>
+                    <temperaturaMin>4</temperaturaMin>
+                    <probLluvia>30%</probLluvia>
+                </prediccion>
+                <prediccion>
+                    <fecha>15-02-2000</fecha>
+                    <temperaturaMax>12</temperaturaMax>
+                    <temperaturaMin>2</temperaturaMin>
+                    <probLluvia>50%</probLluvia>
                 </prediccion>
             </poblacion>
         </provincia>
     </comunidadAutonoma>
 
+    <comunidadAutonoma>
+        <nombre>Comunidad Valenciana</nombre>
+        <provincia>
+            <nombre>Alicante</nombre>
+            <poblacion>
+                <nombre>Torrevieja</nombre>
+                <prediccion>
+                    <fecha>10-03-2000</fecha>
+                    <temperaturaMax>25</temperaturaMax>
+                    <temperaturaMin>12</temperaturaMin>
+                    <probLluvia>0%</probLluvia>
+                </prediccion>
+
+                <prediccion>
+                    <fecha>11-02-2000</fecha>
+                    <temperaturaMax>15</temperaturaMax>
+                    <temperaturaMin>4</temperaturaMin>
+                    <probLluvia>25%</probLluvia>
+                    <aviso>viento</aviso>
+                </prediccion>
+            </poblacion>
+
+            <poblacion>
+                <nombre>Las Matas</nombre>
+                <prediccion>
+                    <fecha>10-03-2000</fecha>
+                    <temperaturaMax>25</temperaturaMax>
+                    <temperaturaMin>12</temperaturaMin>
+                    <probLluvia>0%</probLluvia>
+                </prediccion>
+            </poblacion>
+        </provincia>
+
+        <provincia>
+            <nombre>Valencia</nombre>
+            <poblacion>
+                <nombre>Valencia</nombre>
+                <prediccion>
+                    <fecha>10-03-2000</fecha>
+                    <temperaturaMax>25</temperaturaMax>
+                    <temperaturaMin>12</temperaturaMin>
+                    <probLluvia>5%</probLluvia>
+                </prediccion>
+            </poblacion>
+        </provincia>
+    </comunidadAutonoma>
 
 </meteorologia>
